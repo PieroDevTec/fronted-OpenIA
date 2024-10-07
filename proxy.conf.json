@@ -1,0 +1,12 @@
+{
+    "/sid": {
+        "target": "https://sid.sunarp.gob.pe",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "headers": {
+            "Origin": "https://sid.sunarp.gob.pe",
+            "Accept": "application/pdf"
+        }
+    }
+}

@@ -1,0 +1,90 @@
+<!-- 
+ <div class="row">
+    <div class="col-12 content-img">
+      <img src="assets/img/logo-sunarp-white.svg" alt="logo-sunarp">
+    </div>
+    <div class="col-12 p-3" style="border: 2px solid blue;">
+      <h1 class="title">ASISTENTE REGISTRAL VIRTUAL</h1>
+    </div>
+  </div>
+
+-->
+<div class="container-fluid main">
+  <div class="row">
+    <div class="col-12 content-img">
+      <img src="assets/img/logo-sunarp-white.svg" alt="logo-sunarp">
+    </div>
+    <div class="col-12 p-3">
+      <h1 class="title">ASISTENTE REGISTRAL VIRTUAL</h1>
+    </div>
+  </div>
+  <div class="row">    
+    <div class="col-12" id="content-datos">
+      <div class="datos-interaccion" *ngFor="let int of interacciones">
+        <div class="pregunta">
+          <p><b>Pregunta</b></p>
+          <span>
+            {{int.pregunta}}
+          </span>
+        </div>
+        <div class="respuesta" *ngIf="int.respuesta ">
+          <div class="content-text" *ngIf="int.tipo == 'text'">
+            <p><b>Respuesta</b></p>
+            <p class="parrafo" [innerHTML]="int.respuesta | sanitizeHtml"></p>
+            <!-- <p>{{int.respuesta}}</p> -->
+          </div>
+          <div class="content-pdf" *ngIf="int.tipo == 'pdf'">
+            <iframe #pdfFrame [src]="int.respuesta" style="width: 100%; height: 100%; border: none;"></iframe>
+            <!-- <ngx-extended-pdf-viewer [src]="int.respuesta"
+                        [textLayer]="true" 
+                        [useBrowserLocale]="true">
+            </ngx-extended-pdf-viewer> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+   <div class="col-12 form-ques">
+    <form [formGroup]="form" (ngSubmit)="form.get('continuar')?.value ? this.generarPlantilla() : this.recuperarParteNotarial()">
+      <div class="" *ngIf="interacciones.length > 0">
+        <mat-checkbox class="example-margin" formControlName="continuar" style="color: white !important;">¿Quiere seguir preguntando sobre el resultado obtenido?</mat-checkbox>
+      </div>
+      <div class="input-container">
+          <input class="input-search w-100"
+                 placeholder="Envia un mensaje al asistente registral..." 
+                 formControlName="pregunta"
+                 autofocus
+                 type="text"/>
+          <button class="icon" 
+                  color="primary"
+                  mat-icon-button 
+                  matSuffix 
+                  matTooltip="Buscar"
+                  type="submit">
+            <mat-icon>search</mat-icon>
+          </button>
+      </div>
+      <div class="example-button-row" *ngIf="form.get('continuar')?.value">
+        <button mat-button type="button" (click)="reiniciar()" style="color: #8EC321 !important;">Reiniciar búsqueda</button>
+        <button mat-button type="button" (click)="descargarWord()" style="color: #8EC321 !important;">Descargar Word</button>
+      </div>
+    </form>
+   </div>
+   
+  </div>  
+</div>
+
+<div class="img-footer">
+  <img src="assets/img/logo-iasunarp.png" alt="logo-ia-sunarp">
+</div>
+
+<ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-scale-multiple"
+>
+  <p style="font-size: 20px; color: white">Cargando, por favor espere...</p>
+</ngx-spinner>

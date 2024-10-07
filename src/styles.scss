@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/scss/general.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: $ff-gotham-book;
+  color: $sunarp-black;
+  
+  background-image: url("assets/img/frontis-mejorado.jpeg");
+  background-attachment: fixed;
+  background-position: 50%;
+  background-size: contain cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}

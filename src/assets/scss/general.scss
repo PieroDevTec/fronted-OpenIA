@@ -1,0 +1,129 @@
+/**************************************************/
+/*   GENERAL VARIABLES FOR 'MARCACIONES' PROJECT  */
+/**************************************************/
+
+/*
+    Description:
+    -----------
+    Here you will find all the general variables
+    that can be used in the whole styles application
+*/
+
+/*Importing custom fonts*/
+
+@font-face {
+    font-family: "AvenirLTStd-Black";
+    src: url("../fonts/AvenirLTStd-Black.otf");
+}
+@font-face {
+    font-family: "AvenirLTStd-Medium";
+    src: url("../fonts/AvenirLTStd-Medium.otf");
+}
+@font-face {
+    font-family: "AvenirLTStd-Book";
+    src: url("../fonts/AvenirLTStd-Book.otf");
+}
+@font-face {
+    font-family: "Gotham-Ultra";
+    src: url("../fonts/Gotham-Ultra.otf");
+}
+@font-face {
+    font-family: "Gotham-Black";
+    src: url("../fonts/Gotham-Black.otf");
+}
+@font-face {
+    font-family: "Gotham-Black-Regular";
+    src: url("../fonts/Gotham-Black-Regular.ttf");
+}
+@font-face {
+    font-family: "Gotham-Bold";
+    src: url("../fonts/Gotham-Bold.otf");
+}
+@font-face {
+    font-family: "Gotham-Medium";
+    src: url("../fonts/Gotham-Medium.otf");
+}
+@font-face {
+    font-family: "Gotham-Book";
+    src: url("../fonts/Gotham-Book.ttf");
+}
+@font-face {
+    font-family: "MinionPro-Regular";
+    src: url("../fonts/MinionPro-Regular.otf");
+}
+@font-face {
+    font-family: "MyriadPro-Regular";
+    src: url("../fonts/MyriadPro-Regular.otf");
+}
+
+/*****************/
+/*   VARIABLES   */
+/*****************/
+
+/*Variables for custom fonts calls*/
+
+$ff-avenirLTStd-black: 'AvenirLTStd-Black', sans-serif;
+$ff-avenirLTStd-book: 'AvenirLTStd-Book', sans-serif;
+$ff-gotham-ultra: 'Gotham-Ultra', sans-serif;
+$ff-gotham-black: 'Gotham-Black', sans-serif;
+$ff-gotham-black-regular: 'Gotham-Black-Regular', sans-serif;
+$ff-gotham-bold: 'Gotham-Bold', sans-serif;
+$ff-gotham-medium: 'Gotham-Medium', sans-serif;
+$ff-gotham-book: 'Gotham-Book', sans-serif;
+$ff-minionPro-regular: 'MinionPro-Regular', sans-serif;
+$ff-myriadPro-regular: 'MyriadPro-Regular', sans-serif;
+
+/*Variables for institutional colors*/
+
+$sunarp-green: #8EC321;
+$sunarp-red: #EB3219;
+$sunarp-cyan: #00A5A5;
+$sunarp-yellow: #FFAF00;
+$sunarp-gray-dark: #323C37;
+$sunarp-gray-light: #d6d6d6;
+$sunarp-white: #ffffff;
+$sunarp-black: #222222;
+$sunarp-red-500: #f1705e;
+$sunarp-red-300: #f9c2ba;
+$sunarp-green-500: #B0D564;
+$sunarp-green-300: #DDEDBC;
+$sunarp-gray-dark-300: #273333;
+
+/*Variables for font sizes*/
+
+$font-size-extra-small: 0.92rem;
+$font-size-small: 0.95rem;
+$font-size-normal: 1rem;
+$font-size-medium: 1.1rem;
+$font-size-large: 1.4rem;
+$font-size-mega: 1.5rem;
+$font-size-ultra: 1.6rem;
+
+/*Variables for headers*/
+
+$font-size-h1: 2rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.3rem;
+$font-size-h4: 1.2rem;
+$font-size-h5: 1rem;
+$font-size-h6: 0.98rem;
+
+/*Variables for buttons Dialogs*/
+// .mat-flat-button.mat-accent,
+// .mat-raised-button.mat-accent,
+// .mat-fab.mat-accent,
+// .mat-mini-fab.mat-accent {
+//     background-color: #323C37;
+// }
+
+// .mat-flat-button.mat-primary,
+// .mat-raised-button.mat-primary,
+// .mat-fab.mat-primary,
+// .mat-mini-fab.mat-primary {
+//     background-color: #8EC321;
+// }
+
+// .mat-flat-button.mat-basic, .mat-raised-button.mat-basic, .mat-fab.mat-basic, .mat-mini-fab.mat-basic {
+//     background-color: #323C37;
+//     color: #ffff;
+// }
